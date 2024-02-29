@@ -118,6 +118,19 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+SOCIALACCOUNT_PROVIDERS = {
+    'yandex': {
+
+        'APP': {
+            'client_id': 'b1d2d3c975d34d8c8f07760e53436062',
+            'secret': '12980f63383b42cba93eb17a11970e5c',
+            'key': ''
+        }
+    }
+}
+
+
+ACCOUNT_FORMS = {"signup": "accounts.forms.CustomSignupForm"}
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
@@ -152,3 +165,15 @@ ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+# ACCOUNT_FORMS = {'signup': 'accounts.forms.CustomSignupForm'}
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = "neckcrank"
+EMAIL_HOST_PASSWORD = "azzkodgjhpqdafzx"
+# EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
+
+DEFAULT_FROM_EMAIL = "neckcrank@yandex.ru"
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
