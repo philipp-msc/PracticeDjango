@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.yandex',
+    'django_apscheduler',
 
 ]
 
@@ -168,12 +169,21 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 # ACCOUNT_FORMS = {'signup': 'accounts.forms.CustomSignupForm'}
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.yandex.ru'
-EMAIL_PORT = 465
-EMAIL_HOST_USER = "neckcrank"
-EMAIL_HOST_PASSWORD = "*****"
+EMAIL_HOST = 'smtp.mail.ru'
+EMAIL_PORT = 2525
+EMAIL_HOST_USER = "sftestmail"
+EMAIL_HOST_PASSWORD = "kaNzn25yrqyJYTsezVWe"
 # EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
-DEFAULT_FROM_EMAIL = "neckcrank@yandex.ru"
+DEFAULT_FROM_EMAIL = "sftestmail@mail.ru"
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#
+SERVER_EMAIL = "pheonov@yandex.ru"
+MANAGERS = (
+    ('Ivan', 'neckcrank@yandex.ru'),
+)
+
+ADMINS = (
+    ('anton', 'philipp.msc@gmail.com'),
+)
